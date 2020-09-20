@@ -11,7 +11,6 @@ class DisplayPost extends Component {
         return (
             <div className="card mt-3" onClick={this.onClick} >
                 <Link to = {`/view/post/${this.props.id}`} >
-                    {console.log("Single post", this.props)}
                     <center>
                         <img src={this.props.img} width="400" height="300" alt={this.props.caption} />
                     </center>

@@ -38,14 +38,15 @@ class AddImage extends Component {
             "caption": this.state.caption
         }
        //console.log(val);
-        this.props.addPost(val);
+        //this.props.addPost(val);
+        this.setState({img: null, caption:""});
     }
 
     render() {
         return (
             <div>
                 Post Image: <input type="file" name="addImage" onChange={this.handleChange} /><br />
-                Add Caption: <input type="text" name="caption" onChange={this.handleCaptionChange} /> &nbsp;
+                Add Caption: <input type="text" name="caption" value = {this.state.caption} onChange={this.handleCaptionChange} /> &nbsp;
                 <button className="btn btn-primary" onClick={this.handleOnPost} >Post Image</button>
             </div>
         )
